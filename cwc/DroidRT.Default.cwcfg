@@ -1,0 +1,79 @@
+﻿<Toolchain> <!-- Android Cwc Config -->
+
+<Config>
+	<Platform name="Android" default="true"></Platform>
+	
+	<Type name="C">   <Extention>c</Extention>              </Type>
+	<Type name="C++"> <Extention>c++,cc,cpp,cxx</Extention> </Type>
+	<BinExt>so</BinExt>
+</Config>
+
+
+<Exe>
+
+    <Debugger>ndk/prebuilt/windows-x86_64/bin/gdb.exe</Debugger>
+    <Sanitizer>DrMemory/bin/drmemory.exe</Sanitizer>
+
+    <Compiler type="C">ndk/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe -std=c99 </Compiler>
+
+    <Compiler>ndk/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe</Compiler>
+
+    <Linker>ndk/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe</Linker>
+    <Linker_Static>ndk/toolchains/llvm/prebuilt/windows-x86_64/bin/ar.exe</Linker_Static>
+    <Linker_Dynamic>ndk/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe</Linker_Dynamic>
+
+    <Resource></Resource>
+   
+</Exe>
+
+<Arguments>
+    <CompilerLinker>-target aarch64-linux-android21  </CompilerLinker>
+
+
+	
+	
+    <CompilerLinker>-I"{_pModule}clang_inc/" </CompilerLinker>
+	<CompilerLinker>-I"{_pModule}pthreads/" </CompilerLinker>
+
+  
+    <CompilerLinker>-I"{_pModule}lib/gcc/i686-w64-mingw32/8.1.0/include/" </CompilerLinker>
+  
+
+    <CompilerLinker>-I"{_pProject}" </CompilerLinker>
+
+
+    <CompilerLinker>-fno-rtti -fno-exceptions </CompilerLinker>
+   
+    <!-- <CompilerLinker>-m32 </CompilerLinker> -->
+    <CompilerLinker>-fcolor-diagnostics -fansi-escape-codes </CompilerLinker>
+    <CompilerLinker>-Wno-pragma-pack  </CompilerLinker>
+	
+	<Compiler>-DGZ_D_Monothread</Compiler>
+	
+	<Compiler>-Wglobal-constructors</Compiler>
+    <Compiler>-Wexit-time-destructors</Compiler> 
+ 
+    <Compiler>-Werror=return-type </Compiler>
+	<Compiler>-Wno-return-type-c-linkage</Compiler> 	<!-- Export C with class is acceptable when using it from C++ (Just for Clang): To Follow GCC which is disabled by default -->
+   
+   
+    <Compiler>-MD </Compiler>
+    <Linker>-I"{_pProject}" </Linker>
+   
+    <Linker>-Qunused-arguments -Wno-unused-value -Wno-deprecated-register -Wno-ignored-attributes -Qunused-arguments -Wno-expansion-to-defined -Wno-ignored-pragmas </Linker>   
+ 
+    <Linker>-static-libstdc++  -v </Linker> 
+    <Linker_Static>-r -s </Linker_Static>
+    <Linker_Dynamic>-target aarch64-linux-android21  -shared </Linker_Dynamic>
+
+    <Debug>-g</Debug>
+    <O2>-O2</O2>
+    <O3>-O3</O3>
+    <OS>-Os</OS>
+  
+</Arguments>
+
+</Toolchain> <!-- End -->
+
+
+

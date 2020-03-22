@@ -1,0 +1,15 @@
+Get last NDK
+https://developer.android.com/ndk/downloads
+rename to ndk/
+copy cwc/
+
+7zip:
+ndk\toolchains\llvm\prebuilt\windows-x86_64\bin -> bin.7z.-ex
+~60mo
+ndk\toolchains\llvm\prebuilt\windows-x86_64\lib64 -> lib64.7z.-ex
+~40mo
+ndk\toolchains\llvm\prebuilt\windows-x86_64\bin - others -> windows-x86_64.7z.-ex
+~60mo
+
+ndk/ !toolchain -> ndk.7z.-ex
+~73mo
