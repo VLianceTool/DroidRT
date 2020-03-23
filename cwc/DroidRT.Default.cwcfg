@@ -23,6 +23,8 @@
     <Linker_Dynamic>ndk/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe</Linker_Dynamic>
 
     <Resource></Resource>
+	
+	<Java>jdk/bin/javac.exe</Java>
    
 </Exe>
 

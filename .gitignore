@@ -38,6 +38,9 @@
 # Directory
 obj/
 
+/jdk/**/*
+
+
 /ndk/**/*
 !/ndk
 !/ndk/toolchains
@@ -45,3 +48,7 @@ obj/
 !/ndk/toolchains/llvm/prebuilt
 !/ndk/toolchains/llvm/prebuilt/windows-x86_64
 !*.-ex
+
+
+
+

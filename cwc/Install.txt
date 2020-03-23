@@ -13,3 +13,23 @@ ndk\toolchains\llvm\prebuilt\windows-x86_64\bin - others -> windows-x86_64.7z.-e
 
 ndk/ !toolchain -> ndk.7z.-ex
 ~73mo
+
+Get the last JDK : https://www.oracle.com/java/technologies/javase-downloads.html
+install the JDK in the DroidRT Folder (Rename JDK-XX to JDK)
+
+------------------------------------------------------------------
+
+Redistribute JDK?
+
+According to my reading, yes, but with some caveats:
+
+    -You must redistribute the entire Oracle JDK, OR the entire JRE with just "The javac bytecode compiler" which includes tools.jar; that redistribution is allowed to be "bundled" with your app.
+    
+	-Redistributed JDK or JRE must be "complete and unmodified" (minus a couple sections about things you can add and/or subtract).
+	
+    -Can never redistribute beta versions.
+	
+    -You comply with the other general terms covered in the redistribution section of the license (my source for this entire answer).
+
+more info:
+http://opensource.stackexchange.com/questions/4569/can-we-redistribute-openjdk-tools-jar/4583#4583
