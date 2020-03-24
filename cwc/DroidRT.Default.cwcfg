@@ -24,7 +24,7 @@
 
     <Resource></Resource>
 	
-	<Java>jdk/bin/javac.exe</Java>
+	<javac>jdk/bin/javac.exe</javac>
    
 </Exe>
 
@@ -64,9 +64,9 @@
    
     <Linker>-Qunused-arguments -Wno-unused-value -Wno-deprecated-register -Wno-ignored-attributes -Qunused-arguments -Wno-expansion-to-defined -Wno-ignored-pragmas </Linker>   
  
-    <Linker>-static-libstdc++  -v </Linker> 
+    <Linker>-static-libstdc++ -shared -v </Linker> 
     <Linker_Static>-r -s </Linker_Static>
-    <Linker_Dynamic>-target aarch64-linux-android21  -shared </Linker_Dynamic>
+    <Linker_Dynamic>-target aarch64-linux-android21  -shared </Linker_Dynamic> <!-- 'shared' Always dynamic lib -->
 
     <Debug>-g</Debug>
     <O2>-O2</O2>
