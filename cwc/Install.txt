@@ -33,3 +33,38 @@ According to my reading, yes, but with some caveats:
 
 more info:
 http://opensource.stackexchange.com/questions/4569/can-we-redistribute-openjdk-tools-jar/4583#4583
+
+
+------------------------------------------------------------------
+
+Android SDK
+
+https://developer.android.com/studio/index.html#downloads
+
+
+Command line tools only?
+
+
+Get last version tool here:
+https://android-sdk.fr.uptodown.com/windows/telecharger
+
+copy tools
+
+
+
+--------------------------- DX
+
+Get dx.jar from sdk to platform-tools\lib
+
+
+------------------------ AAPT
+https://androidaapt.com/ => aapt
+
+
+-------------------------- ADB
+Get Platform tool
+https://dl.google.com/android/repository/platform-tools-latest-windows.zip
+
+Configurer l’appareil Android pour ADB
+
+Pour utiliser ADB, il est nécessaire d’activer le débogage USB dans les options de développement sur l’appareil Android. Pour cela, rendez-vous dans la section « À propos du téléphone » dans les paramètres de l’appareil, puis touchez sept fois la zone Numéro de build. Au terme des sept appuis, un message vous indique que vous êtes développeur ! L’option Options de développement apparaît de nouveau dans les paramétrages Android. Vous pourrez alors activer ou non le Débogage USB.

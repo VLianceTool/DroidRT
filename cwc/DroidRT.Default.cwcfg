@@ -1,4 +1,4 @@
-﻿<Toolchain> <!-- Android Cwc Config -->
+﻿<Toolchain> <!-- Android Cwc Config arm64-v8a -->
 
 <Config>
 	<Platform name="Android" default="true"></Platform>
@@ -24,15 +24,27 @@
 
     <Resource></Resource>
 	
-	<javac>jdk/bin/javac.exe</javac>
+	<ndk-build>ndk/prebuilt/windows-x86_64/bin/make.exe</ndk-build> <!-- https://developer.android.com/ndk/guides/ndk-build -->
+	
+	<javac>jdk/bin/javac.exe -source 8 -target 8 -bootclasspath "{_pModule}api/android-21/android.jar" </javac>
+	<dx>jdk/bin/java.exe -jar "{_pModule}platform-tools/lib/dx.jar" --dex</dx>
+	
+	<res>aapt/aapt.exe package -f -I "{_pModule}api/android-21/android.jar" </res>
+	<apk>aapt/aapt.exe package -f -I "{_pModule}api/android-21/android.jar" </apk>
+	<aapt>aapt/aapt.exe </aapt>
+	<zipalign>aapt/zipalign.exe -f -p 4 </zipalign>
+	<keytool>jdk/bin/keytool.exe</keytool>
+	
+	
+	<apksigner>jdk/bin/java.exe -jar "{_pModule}aapt/lib/apksigner.jar" sign </apksigner>
+	
+	
    
 </Exe>
 
 <Arguments>
-    <CompilerLinker>-target aarch64-linux-android21  </CompilerLinker>
+    <CompilerLinker>-target aarch64-linux-android21 </CompilerLinker>
 
-
-	
 	
     <CompilerLinker>-I"{_pModule}clang_inc/" </CompilerLinker>
 	<CompilerLinker>-I"{_pModule}pthreads/" </CompilerLinker>
