@@ -37,9 +37,11 @@
 
 # Directory
 obj/
+platform-tools/
+aapt/
 
 /jdk/**/*
-
+/api/**/*
 
 /ndk/**/*
 !/ndk

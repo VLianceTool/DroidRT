@@ -1,4 +1,6 @@
-﻿<Toolchain> <!-- Android Cwc Config arm64-v8a -->
+﻿<Toolchain> <!-- Android Cwc Config -->
+
+<cmd>-{pLib_ABI}=lib/arm64-v8a/</cmd> 
 
 <Config>
 	<Platform name="Android" default="true"></Platform>
@@ -11,6 +13,8 @@
 
 <Exe>
 
+	<Resource></Resource>
+
     <Debugger>ndk/prebuilt/windows-x86_64/bin/gdb.exe</Debugger>
     <Sanitizer>DrMemory/bin/drmemory.exe</Sanitizer>
 
@@ -22,8 +26,6 @@
     <Linker_Static>ndk/toolchains/llvm/prebuilt/windows-x86_64/bin/ar.exe</Linker_Static>
     <Linker_Dynamic>ndk/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe</Linker_Dynamic>
 
-    <Resource></Resource>
-	
 	<ndk-build>ndk/prebuilt/windows-x86_64/bin/make.exe</ndk-build> <!-- https://developer.android.com/ndk/guides/ndk-build -->
 	
 	<javac>jdk/bin/javac.exe -source 8 -target 8 -bootclasspath "{_pModule}api/android-21/android.jar" </javac>
@@ -35,11 +37,8 @@
 	<zipalign>aapt/zipalign.exe -f -p 4 </zipalign>
 	<keytool>jdk/bin/keytool.exe</keytool>
 	
-	
 	<apksigner>jdk/bin/java.exe -jar "{_pModule}aapt/lib/apksigner.jar" sign </apksigner>
 	
-	
-   
 </Exe>
 
 <Arguments>
