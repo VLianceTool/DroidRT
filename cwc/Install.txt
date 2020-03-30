@@ -68,3 +68,8 @@ https://dl.google.com/android/repository/platform-tools-latest-windows.zip
 Configurer l’appareil Android pour ADB
 
 Pour utiliser ADB, il est nécessaire d’activer le débogage USB dans les options de développement sur l’appareil Android. Pour cela, rendez-vous dans la section « À propos du téléphone » dans les paramètres de l’appareil, puis touchez sept fois la zone Numéro de build. Au terme des sept appuis, un message vous indique que vous êtes développeur ! L’option Options de développement apparaît de nouveau dans les paramétrages Android. Vous pourrez alors activer ou non le Débogage USB.
+
+
+--------------------------  DEBUG
+
+Add ndk-stack.exe to platform-tools or use the python version

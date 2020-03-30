@@ -39,7 +39,8 @@
 	
 	<apksigner>jdk/bin/java.exe -jar "{_pModule}aapt/lib/apksigner.jar" sign </apksigner>
 	<adb>platform-tools/adb.exe</adb>
-	
+	<ndk-stack>platform-tools/ndk-stack.exe</ndk-stack>
+
 </Exe>
 
 <Arguments>
