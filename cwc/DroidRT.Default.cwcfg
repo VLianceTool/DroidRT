@@ -38,6 +38,7 @@
 	<keytool>jdk/bin/keytool.exe</keytool>
 	
 	<apksigner>jdk/bin/java.exe -jar "{_pModule}aapt/lib/apksigner.jar" sign </apksigner>
+	<adb>platform-tools/adb.exe</adb>
 	
 </Exe>
 
