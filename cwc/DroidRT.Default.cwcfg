@@ -28,11 +28,11 @@
 
 	<ndk-build>ndk/prebuilt/windows-x86_64/bin/make.exe</ndk-build> <!-- https://developer.android.com/ndk/guides/ndk-build -->
 	
-	<javac>jdk/bin/javac.exe -source 8 -target 8 -bootclasspath "{_pModule}api/android-26/android.jar" </javac>
+	<javac>jdk/bin/javac.exe -source 8 -target 8 -bootclasspath "{_pModule}api/android-30/android.jar" </javac>
 	<dx>jdk/bin/java.exe -jar "{_pModule}platform-tools/lib/dx.jar" --dex</dx>
 	
-	<res>aapt/aapt.exe package -f -I "{_pModule}api/android-26/android.jar" </res>
-	<apk>aapt/aapt.exe package -f -I "{_pModule}api/android-26/android.jar" </apk>
+	<res>aapt/aapt.exe package -f -I "{_pModule}api/android-30/android.jar" </res>
+	<apk>aapt/aapt.exe package -f -I "{_pModule}api/android-30/android.jar" </apk>
 	<aapt>aapt/aapt.exe </aapt>
 	<zipalign>aapt/zipalign.exe -f -p 4 </zipalign>
 	<keytool>jdk/bin/keytool.exe</keytool>
@@ -44,7 +44,7 @@
 </Exe>
 
 <Arguments>
-    <CompilerLinker>-target aarch64-linux-android26 </CompilerLinker>
+    <CompilerLinker>-target aarch64-linux-android30 </CompilerLinker>
 
 	
     <CompilerLinker>-I"{_pModule}clang_inc/" </CompilerLinker>
@@ -80,7 +80,7 @@
  
     <Linker>-static-libstdc++ -shared -v </Linker> 
     <Linker_Static>-r -s </Linker_Static>
-    <Linker_Dynamic>-target aarch64-linux-android26  -shared </Linker_Dynamic> <!-- 'shared' Always dynamic lib -->
+    <Linker_Dynamic>-target aarch64-linux-android30  -shared </Linker_Dynamic> <!-- 'shared' Always dynamic lib -->
 
     <Debug>-g</Debug>
     <O2>-O2</O2>

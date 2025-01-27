@@ -31,8 +31,8 @@
 	<javac>jdk/bin/javac.exe -source 8 -target 8 -bootclasspath "{_pModule}api/android-21/android.jar" </javac>
 	<dx>jdk/bin/java.exe -jar "{_pModule}platform-tools/lib/dx.jar" --dex</dx>
 	
-	<res>aapt/aapt.exe package -f -I "{_pModule}api/android-21/android.jar" </res>
-	<apk>aapt/aapt.exe package -f -I "{_pModule}api/android-21/android.jar" </apk>
+	<res>aapt/aapt.exe package -f -I "{_pModule}api/android-28/android.jar" </res>
+	<apk>aapt/aapt.exe package -f -I "{_pModule}api/android-28/android.jar" </apk>
 	<aapt>aapt/aapt.exe </aapt>
 	<zipalign>aapt/zipalign.exe -f -p 4 </zipalign>
 	<keytool>jdk/bin/keytool.exe</keytool>
