@@ -18,7 +18,7 @@
     <Debugger>ndk/prebuilt/windows-x86_64/bin/gdb.exe</Debugger>
     <Sanitizer>DrMemory/bin/drmemory.exe</Sanitizer>
 
-    <Compiler type="C">ndk/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe -std=c99 </Compiler>
+    <Compiler type="C">ndk/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe -std=c11 </Compiler>
 
     <Compiler>ndk/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe</Compiler>
 
@@ -72,7 +72,7 @@
     <Compiler>-Werror=return-type </Compiler>
 	<Compiler>-Wno-return-type-c-linkage</Compiler> 	<!-- Export C with class is acceptable when using it from C++ (Just for Clang): To Follow GCC which is disabled by default -->
    
-   
+    <Compiler>-fPIC </Compiler>
     <Compiler>-MD </Compiler>
     <Linker>-I"{_pProject}" </Linker>
    
