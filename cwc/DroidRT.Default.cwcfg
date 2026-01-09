@@ -53,7 +53,8 @@
 
   
     <CompilerLinker>-I"{_pModule}lib/gcc/i686-w64-mingw32/8.1.0/include/" </CompilerLinker>
-  
+    <Linker>-L"{_pModule}ndk/platforms/android-28/arch-arm64/usr/lib/" </Linker>
+    <!-- Can be also autodetect in ndk\toolchains\llvm\prebuilt\windows-x86_64\sysroot\usr\lib\aarch64-linux-android\29  -->
 
     <CompilerLinker>-I"{_pProject}" </CompilerLinker>
 
